@@ -52,18 +52,18 @@ map.addLayer({
 }
 });
  
-// map.on('click','dist-name', function(e) {
-// // The event object (e) contains information like the
-// // coordinates of the point on the map that was clicked.
-// console.log(e.features[0].properties);
-// var dist_num = e.features[0].properties["cong_dist"];
+map.on('click','dist-name', function(e) {
+// The event object (e) contains information like the
+// coordinates of the point on the map that was clicked.
+console.log(e.features[0].properties);
+var dist_num = e.features[0].properties["cong_dist"];
 
 
-// new mapboxgl.Popup()
-// .setLngLat(e.lngLat)
-// .setHTML('<h3> District:  </h3>' + dist_num)
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+console.log(dist_num)
 // .addTo(map);
-// });
+});
 
 
 map.on('mousemove', 'dist-name', function(e) {
